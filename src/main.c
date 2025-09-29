@@ -18,12 +18,12 @@ void geo_work_handler(struct k_work *work_geo)
 {
 	const struct device *rom_dev = DEVICE_DT_GET(SPI_FLASH_DEVICE);
 
-	printk("ADC handler called\n");
-	app_eeprom_handler(rom_dev);
+//	printk("ADC handler called\n");
+//	app_eeprom_handler(rom_dev);
 
-	// printk("test only sensor connected on ADC P0.02\n");
-	// int16_t value = app_nrf52_get_adc();
-	// printk("return velocity: %d mV\n", value);
+	printk("test only sensor connected on ADC P0.02\n");
+	int16_t value = app_nrf52_get_adc();
+	printk("return velocity: %d mV\n", value);
 }
 K_WORK_DEFINE(geo_work, geo_work_handler);
 
@@ -54,6 +54,6 @@ int8_t main(void)
 	printk("ADC nRF52 and QSPI Flash EEPROM Example\n");
 
 	// start the timer to trigger the interrupt subroutine every 5 seconds
-	k_timer_start(&geo_timer, K_NO_WAIT, K_MSEC(5000));
+	k_timer_start(&geo_timer, K_NO_WAIT, K_MSEC(1000));
 	return 0;
 }
