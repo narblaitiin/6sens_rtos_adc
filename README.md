@@ -8,6 +8,11 @@ This first code allows us to convert a voltage and digital values and adds proce
 
 This allows us to test the analog part of PCB and the internal ADC of the MDBT50Q. The final goal will be to send the samples to a lorawan server and clear the memory location once a day or when it is full.
 
+The version of Zephyr RTOS used is the version v4.0.0.
+
+## Board used
+Original MDBT50Q board, powered by battery/solar panel. (see 6sens_prj repository/hardware part, for more information.)
+
 ## Building and Running
 The following commands clean build folder, build and flash the sample:
 
