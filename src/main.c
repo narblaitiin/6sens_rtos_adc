@@ -23,7 +23,6 @@ void geo_work_handler(struct k_work *work_geo)
 
 	printk("test only sensor connected on ADC P0.02\n");
 	int16_t value = app_nrf52_get_adc();
-	printk("return velocity: %d mV\n", value);
 }
 K_WORK_DEFINE(geo_work, geo_work_handler);
 
