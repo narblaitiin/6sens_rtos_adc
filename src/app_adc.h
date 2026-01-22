@@ -18,7 +18,8 @@
 // ADC characteristics (nRF52 SAADC)
 #define ADC_REF_INTERNAL_MV         600     // 0.6 V internal reference
 #define ADC_GAIN                    6       // using ADC_GAIN_1_6 -> 1/6
-#define ADC_RESOLUTION              4096    // 12-bit
+//#define ADC_RESOLUTION              4096    // 12-bit
+#define ADC_RESOLUTION              16384   // 14-bit
 
 // effective full-scale voltage in mV
 #define ADC_FULL_SCALE_MV   ((ADC_REF_INTERNAL_MV * ADC_GAIN))  // 3600 mV full scale
