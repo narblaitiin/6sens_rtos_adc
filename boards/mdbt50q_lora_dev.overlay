@@ -21,11 +21,9 @@
 	channel@0 {
 		reg = <0>;											/* channel 0 of the ADC */
 		zephyr,gain = "ADC_GAIN_1_6";						/* attenuated by 6 (x1/6) */
-		zephyr,reference = "ADC_REF_INTERNAL";				/* reference voltage +0.6 */
+		zephyr,reference = "ADC_REF_INTERNAL";				/* reference voltage +0.6V */
 		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;	/* 10us */
 		zephyr,input-positive = <NRF_SAADC_AIN0>;			/* P0.02 for nRF52xx */
-		/*zephyr,resolution = <12>;*/
-		zephyr,resolution = <14>;
-		zephyr,oversampling = <8>;
+		zephyr,resolution = <12>;
 	};
 };
