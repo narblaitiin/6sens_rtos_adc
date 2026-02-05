@@ -53,6 +53,6 @@ int8_t main(void)
 	printk("ADC nRF52 and QSPI Flash EEPROM Example\n");
 
 	// start the timer to trigger the interrupt subroutine every 5 seconds
-	k_timer_start(&geo_timer, K_NO_WAIT, K_MSEC(1000));
+	k_timer_start(&geo_timer, K_NO_WAIT, K_MSEC(500));
 	return 0;
 }
